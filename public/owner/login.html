@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <title>Owner Portal Login — Almajdoub Dispatch</title>
+  <link rel="icon" href="/assets/favicon.ico">
+  <link rel="stylesheet" href="/assets/site.css">
+  <link rel="stylesheet" href="/assets/dashboard.css">
+  <script src="/assets/owner-auth.js" defer></script>
+</head>
+<body style="background: var(--paper);">
+  <a class="skip-link" href="#login-box">Skip to login</a>
+  <header class="site-header" style="border-bottom: 1px solid var(--line);">
+    <div class="header-inner" style="justify-content: center; padding-block: 1.25rem;">
+      <a class="wordmark" href="/index.html" aria-label="Almajdoub Dispatch home">
+        <img class="brand-logo" src="/assets/almajdoub-logo-horizontal.png" alt="Almajdoub Dispatch — Your truck. Your call.">
+      </a>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="login-card" id="login-box">
+      <p class="eyebrow" style="text-align: center;">Authorized Management Access</p>
+      <h1 style="font-size: 1.5rem; text-align: center; margin-top: 0.25rem; color: var(--blue-deep);">Owner Operations Portal</h1>
+      <p class="fine" style="text-align: center; margin-bottom: 1.5rem;">Sign in with your administrative credentials to manage carrier intake, waitlist status, and dispatch pipelines.</p>
+
+      <form id="owner-login-form" novalidate>
+        <div class="form-group" style="margin-bottom: 1rem;">
+          <label for="owner-username">Username or Administrative Email</label>
+          <input id="owner-username" name="username" type="text" autocomplete="username" required placeholder="admin or owner@almajdoubdispatch.com">
+        </div>
+
+        <div class="form-group" style="margin-bottom: 1.5rem;">
+          <label for="owner-password">Password</label>
+          <input id="owner-password" name="password" type="password" autocomplete="current-password" required placeholder="••••••••••••">
+        </div>
+
+        <button class="button" id="login-submit-btn" type="submit" style="width: 100%; min-height: 48px; font-size: 1rem; background: var(--blue-deep);">Sign In to Operations Console</button>
+        <p id="login-message" class="waitlist-message" role="status" aria-live="polite" style="margin-top: 1rem; text-align: center;"></p>
+      </form>
+
+      <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--line); text-align: center; font-size: 0.8rem; color: var(--muted);">
+        <p>Restricted area. All sign-in attempts are monitored and recorded. Unauthorized access attempts are prohibited.</p>
+        <a href="/index.html" style="color: var(--blue); font-weight: 600;">&larr; Return to Public Website</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
