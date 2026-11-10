@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="description" content="Digital Motor Carrier Onboarding Application — Almajdoub Dispatch. Complete your compliance setup and digital agreement in minutes.">
+  <title>Carrier Onboarding Application — Almajdoub Dispatch</title>
+  <link rel="icon" href="assets/favicon.ico">
+  <link rel="stylesheet" href="assets/site.css">
+  <link rel="stylesheet" href="assets/onboarding.css">
+  <script src="assets/analytics.js" defer></script>
+  <script src="assets/onboarding.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="wordmark" href="index.html" aria-label="Almajdoub Dispatch home">
+        <img class="brand-logo" src="assets/almajdoub-logo-horizontal.png" alt="Almajdoub Dispatch — Your truck. Your call.">
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="services.html">Services</a>
+        <a href="how-it-works.html">How it works</a>
+        <a href="offers.html">Plans</a>
+        <a href="pricing.html">Calculators</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="autosave-notice" id="autosave-status">
+        <span>Draft saved automatically</span>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="container" style="padding-top: 2rem; padding-bottom: 3.5rem;">
+      <div style="text-align: center; max-width: 680px; margin: 0 auto 2rem auto;">
+        <p class="eyebrow">Carrier Qualification &amp; Digital Agreement</p>
+        <h1>Motor Carrier Onboarding</h1>
+        <p class="lede">Complete your carrier profile, fleet details, required compliance documents, and digital agreement review. Save and resume at any time.</p>
+        <div class="transparency-banner" style="margin: 1.5rem auto; text-align: left; max-width: 720px;">
+          <div class="transparency-icon">⚡</div>
+          <div class="transparency-content">
+            <strong>Zero Sales Calls · Priority Skip-the-Line Workflow:</strong>
+            <span>By completing your digital profile and agreement online, your submission skips phone sales queues and routes directly to the operations desk for immediate MC authority review.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="onboarding-wizard">
+        <nav class="wizard-steps" aria-label="Onboarding Progress">
+          <div class="wizard-step active" id="step-nav-1">
+            <span class="step-num">1</span>
+            <span class="step-label">Authority &amp; Legal</span>
+          </div>
+          <div class="wizard-step" id="step-nav-2">
+            <span class="step-num">2</span>
+            <span class="step-label">Fleet &amp; Lanes</span>
+          </div>
+          <div class="wizard-step" id="step-nav-3">
+            <span class="step-num">3</span>
+            <span class="step-label">Compliance Docs</span>
+          </div>
+          <div class="wizard-step" id="step-nav-4">
+            <span class="step-num">4</span>
+            <span class="step-label">Agreement &amp; E-Sign</span>
+          </div>
+          <div class="wizard-step" id="step-nav-5">
+            <span class="step-num">5</span>
+            <span class="step-label">Confirmation</span>
+          </div>
+        </nav>
+
+        <form id="carrier-onboarding-form" novalidate>
+          <!-- STEP 1: Authority & Legal Entity -->
+          <div class="form-section active" id="section-1">
+            <h2>Step 1: Carrier Authority &amp; Entity Profile</h2>
+            <p class="fine">Provide your active FMCSA authority credentials and registered business entity details.</p>
+            
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="carrier-legal-name">Carrier Legal Business Name *</label>
+                <input id="carrier-legal-name" name="carrierLegalName" type="text" autocomplete="organization" required placeholder="e.g. Apex Express Freight LLC">
+              </div>
+              <div class="form-group">
+                <label for="carrier-dba">DBA / Trade Name (if applicable)</label>
+                <input id="carrier-dba" name="carrierDba" type="text" placeholder="e.g. Apex Freight">
+              </div>
+            </div>
+
+            <div class="form-grid-3">
+              <div class="form-group">
+                <label for="mc-number">MC Number *</label>
+                <input id="mc-number" name="mcNumber" type="text" required placeholder="e.g. 1234567">
+              </div>
+              <div class="form-group">
+                <label for="usdot-number">USDOT Number *</label>
+                <input id="usdot-number" name="dotNumber" type="text" required placeholder="e.g. 3456789">
+              </div>
+              <div class="form-group">
+                <label for="tax-id">EIN / Federal Tax ID *</label>
+                <input id="tax-id" name="taxId" type="text" required placeholder="XX-XXXXXXX">
+              </div>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 1.25rem;">
+              <label for="physical-address">Physical Terminal / Business Address *</label>
+              <input id="physical-address" name="physicalAddress" type="text" required placeholder="Street address, City, State, ZIP">
+            </div>
+
+            <div class="form-grid-3">
+              <div class="form-group">
+                <label for="contact-name">Primary Authorized Contact *</label>
+                <input id="contact-name" name="contactName" type="text" required placeholder="e.g. John Doe">
+              </div>
+              <div class="form-group">
+                <label for="contact-phone">Dispatch Telephone *</label>
+                <input id="contact-phone" name="phone" type="tel" required placeholder="(555) 000-0000">
+              </div>
+              <div class="form-group">
+                <label for="contact-email">Business Dispatch Email *</label>
+                <input id="contact-email" name="email" type="email" required placeholder="dispatch@carrier.com">
+              </div>
+            </div>
+
+            <div class="wizard-nav">
+              <span class="fine">All information is securely encrypted and role-protected.</span>
+              <button class="button" type="button" onclick="window.AlmajdoubOnboarding.goToStep(2)">Continue to Fleet &amp; Lanes &rarr;</button>
+            </div>
+          </div>
+
+          <!-- STEP 2: Fleet & Operating Profile -->
+          <div class="form-section" id="section-2">
+            <h2>Step 2: Fleet &amp; Operating Preferences</h2>
+            <p class="fine">Specify your active power units, equipment specifications, and preferred operating regions.</p>
+
+            <div class="form-grid-3">
+              <div class="form-group">
+                <label for="truck-count">Active Power Units (Tractors) *</label>
+                <input id="truck-count" name="truckCount" type="number" min="1" max="100" value="1" required>
+              </div>
+              <div class="form-group">
+                <label for="equipment-type">Primary Equipment Focus *</label>
+                <select id="equipment-type" name="equipmentType" required>
+                  <option value="53_dry_van">53-foot Dry Van</option>
+                  <option value="53_reefer">53-foot Reefer (Reefer Addendum Required)</option>
+                  <option value="mixed_van_reefer">Mixed (Dry Van &amp; Reefer)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="max-weight">Max Scaled Cargo Weight (lbs) *</label>
+                <input id="max-weight" name="maxWeight" type="number" step="500" value="44000" required>
+              </div>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 1.25rem;">
+              <label for="unit-vins">Tractor Unit Numbers &amp; Partial VINs</label>
+              <textarea id="unit-vins" name="unitVins" rows="2" placeholder="e.g. Unit 101: 1FUJGLDR9... | Unit 102: 3AKJHCDR8..."></textarea>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="preferred-lanes">Preferred Operating Lanes / States *</label>
+                <input id="preferred-lanes" name="preferredLanes" type="text" required placeholder="e.g. Midwest, Southeast, TX to OH, Regional">
+              </div>
+              <div class="form-group">
+                <label for="factoring-company">Factoring Company Name (if applicable)</label>
+                <input id="factoring-company" name="factoringCompany" type="text" placeholder="e.g. Apex Capital, RTS, Triumph, or None">
+              </div>
+            </div>
+
+            <div class="wizard-nav">
+              <button class="button secondary" type="button" onclick="window.AlmajdoubOnboarding.goToStep(1)">&larr; Back</button>
+              <button class="button" type="button" onclick="window.AlmajdoubOnboarding.goToStep(3)">Continue to Documents &rarr;</button>
+            </div>
+          </div>
+
+          <!-- STEP 3: Compliance Documents Staging -->
+          <div class="form-section" id="section-3">
+            <h2>Step 3: Required Compliance Documentation</h2>
+            <p class="fine">Federal freight brokers require active verification files. Prepare or attach the metadata for your compliance packet.</p>
+
+            <div class="status-list" style="margin-bottom: 1.5rem;">
+              <div class="status-item">
+                <strong>Certificate of Insurance (COI)</strong>
+                Minimum $1,000,000 Auto Liability and $100,000 Cargo. Certificate holder must be: <em>Almajdoub Dispatch LLC</em>.
+                <div class="file-dropzone" onclick="document.getElementById('file-coi').click()">
+                  <input type="file" id="file-coi" name="docCoi" accept=".pdf,.jpg,.png" onchange="window.AlmajdoubOnboarding.handleFile(this, 'coi-status')">
+                  <span id="coi-status">Click to select COI Document (PDF / Image)</span>
+                </div>
+              </div>
+              <div class="status-item">
+                <strong>W-9 Tax Form</strong>
+                Signed and dated W-9 matching your registered legal entity and EIN.
+                <div class="file-dropzone" onclick="document.getElementById('file-w9').click()">
+                  <input type="file" id="file-w9" name="docW9" accept=".pdf,.jpg,.png" onchange="window.AlmajdoubOnboarding.handleFile(this, 'w9-status')">
+                  <span id="w9-status">Click to select W-9 Form (PDF / Image)</span>
+                </div>
+              </div>
+              <div class="status-item">
+                <strong>FMCSA MC Authority Letter</strong>
+                Copy of your official FMCSA Certificate of Operating Authority.
+                <div class="file-dropzone" onclick="document.getElementById('file-auth').click()">
+                  <input type="file" id="file-auth" name="docAuth" accept=".pdf,.jpg,.png" onchange="window.AlmajdoubOnboarding.handleFile(this, 'auth-status')">
+                  <span id="auth-status">Click to select Authority Letter</span>
+                </div>
+              </div>
+              <div class="status-item">
+                <strong>Notice of Assignment (NOA)</strong>
+                Required if you factor your receivables to ensure direct broker payment.
+                <div class="file-dropzone" onclick="document.getElementById('file-noa').click()">
+                  <input type="file" id="file-noa" name="docNoa" accept=".pdf,.jpg,.png" onchange="window.AlmajdoubOnboarding.handleFile(this, 'noa-status')">
+                  <span id="noa-status">Click to select NOA (Optional if not factored)</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="wizard-nav">
+              <button class="button secondary" type="button" onclick="window.AlmajdoubOnboarding.goToStep(2)">&larr; Back</button>
+              <button class="button" type="button" onclick="window.AlmajdoubOnboarding.goToStep(4)">Continue to Agreement Review &rarr;</button>
+            </div>
+          </div>
+
+          <!-- STEP 4: Agreement Review & E-Signature -->
+          <div class="form-section" id="section-4">
+            <h2>Step 4: Dispatch Services Agreement Review &amp; E-Signature</h2>
+            <p class="fine">Review the contractual summary of our Dispatch Services Agreement and Limited Power of Attorney.</p>
+
+            <div class="agreement-scrollbox" tabindex="0">
+              <h3>SUMMARY OF AGREEMENT TERMS &amp; OPERATING BOUNDARIES (v2026-11-06)</h3>
+              <p><strong>1. APPOINTMENT &amp; INDEPENDENCE:</strong> Carrier appoints Almajdoub Dispatch as independent dispatch coordinator. Almajdoub Dispatch is not a motor carrier or freight broker.</p>
+              <p><strong>2. CARRIER CONTROL &amp; SIGNATURE:</strong> Carrier retains 100% sole discretion to accept or decline any proposed shipment. Almajdoub Dispatch shall never accept a load without explicit carrier approval. Carrier signs its own Rate Confirmation directly with licensed brokers.</p>
+              <p><strong>3. LIMITED POWER OF ATTORNEY:</strong> Carrier grants limited authority solely to contact licensed brokers, submit carrier setup packets, request certificates of insurance, and coordinate pickup/delivery routing instructions.</p>
+              <p><strong>4. DISPATCH FEES &amp; BILLING:</strong> Fees are calculated strictly on Linehaul as specified in Schedule A (e.g. 5% Founder / 7% Standard). Invoices are issued weekly on Friday following successful delivery and acceptable POD. Payment is due in accordance with Schedule A.</p>
+              <p><strong>5. SEPARATION OF FUNDS:</strong> Carrier freight revenue is paid directly by brokers or factoring companies to Carrier. Almajdoub Dispatch never holds, factors, or commingles freight monies.</p>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="selected-plan">Select Enrolled Fee Schedule *</label>
+                <select id="selected-plan" name="selectedPlan" required>
+                  <option value="founder_percentage">Founder Percentage (5% Dry Van / 5.5% Reefer) - Subject to Gate Eligibility</option>
+                  <option value="standard_percentage">Standard Percentage (7% Dry Van / 8% Reefer)</option>
+                  <option value="flat_rate_weekly">Flat Rate Weekly ($245 Founder min 2 trucks / $299 Standard min 3 trucks)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="referral-code">Referral Partner / Source (if referred)</label>
+                <input id="referral-code" name="referralCode" type="text" placeholder="e.g. Partner Carrier Name or REF-CODE">
+              </div>
+            </div>
+
+            <div style="margin: 1.5rem 0;">
+              <label class="privacy-acknowledgment" for="agree-terms" style="display: flex; gap: 0.6rem; align-items: flex-start;">
+                <input id="agree-terms" name="agreeTerms" type="checkbox" required>
+                <span><strong>I have read, understand, and agree</strong> to the terms of the Almajdoub Dispatch Services Agreement, Fee Schedule, and Limited Power of Attorney as outlined above. (Required)</span>
+              </label>
+              <label class="privacy-acknowledgment" for="electronic-consent" style="display: flex; gap: 0.6rem; align-items: flex-start; margin-top: 0.75rem;">
+                <input id="electronic-consent" name="electronicConsent" type="checkbox" required>
+                <span>I consent to the use of electronic signatures and records pursuant to the U.S. E-SIGN Act and state Uniform Electronic Transactions Acts (UETA). (Required)</span>
+              </label>
+            </div>
+
+            <div class="form-grid-2" style="background: var(--paper); padding: 1.25rem; border: 1px solid var(--line); border-radius: 4px;">
+              <div class="form-group">
+                <label for="signer-name">Authorized Signer Full Legal Name *</label>
+                <input id="signer-name" name="signerName" type="text" required placeholder="e.g. Johnathan R. Doe">
+              </div>
+              <div class="form-group">
+                <label for="signer-title">Signer Title / Capacity *</label>
+                <input id="signer-title" name="signerTitle" type="text" required placeholder="e.g. Owner, Managing Member, President">
+              </div>
+            </div>
+
+            <div class="wizard-nav">
+              <button class="button secondary" type="button" onclick="window.AlmajdoubOnboarding.goToStep(3)">&larr; Back</button>
+              <button class="button" id="submit-onboarding-btn" type="submit" style="background: var(--blue-deep);">Submit Carrier Application</button>
+            </div>
+            <p id="onboarding-message" class="waitlist-message" role="status" aria-live="polite" style="margin-top: 1rem;"></p>
+          </div>
+
+          <!-- STEP 5: Confirmation & Application Tracking -->
+          <div class="form-section" id="section-5">
+            <div class="panel blue" style="text-align: center; padding: 2.5rem 1.5rem;">
+              <p class="eyebrow">Application Successfully Received</p>
+              <h2 style="margin-top: 0.5rem;">Application Reference: <span id="app-reference" style="font-family: var(--font-mono); color: var(--blue-deep);">APP-PENDING</span></h2>
+              <p style="max-width: 650px; margin: 1rem auto; line-height: 1.7;">Your digital onboarding application and electronic agreement have been recorded. Our compliance operations desk is conducting the mandatory safety and insurance verification.</p>
+              
+              <div style="background: #fff; padding: 1.25rem; border: 1px solid var(--line); max-width: 500px; margin: 1.5rem auto; text-align: left;">
+                <p><strong>Next Steps:</strong></p>
+                <ul style="padding-left: 1.25rem; margin: 0.5rem 0;">
+                  <li>Verification of certificate holder listing with your insurance producer.</li>
+                  <li>FMCSA safety rating and operating authority check.</li>
+                  <li>Dispatcher assignment call and equipment profile confirmation.</li>
+                </ul>
+              </div>
+
+              <p class="fine">Estimated review turnaround: 24 business hours. If you have immediate questions, contact our desk directly at <a href="contact.html">Operations Desk</a>.</p>
+              <a class="button" href="index.html" style="margin-top: 1rem;">Return to Homepage</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">
+          <img src="assets/almajdoub-logo-footer-white-transparent.png" alt="Almajdoub Dispatch — Your truck. Your call.">
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="index.html">Home</a>
+          <a href="founder-offer.html">Founder Offer</a>
+          <a href="dispatch-services.html">Services</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+      <p>Almajdoub Dispatch — Motor Carrier Onboarding.</p>
+    </div>
+  </footer>
+</body>
+</html>
