@@ -1,0 +1,13 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "almajdoub-dis-1",
+  "compatibility_date": "2026-11-04",
+  "main": "worker.js",
+  "assets": {
+    "directory": "public",
+    "binding": "ASSETS"
+  },
+  "observability": {
+    "enabled": true
+  }
+}
